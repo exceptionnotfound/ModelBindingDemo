@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Class Binding";
+}
+
+<h3>Class Binding</h3>
+
+<div>
+    @using (Html.BeginForm("ClassBinding", "Home"))
+    {
+        <div>
+            ID:
+            <input name="ID" type="text" />
+        </div>
+        <div>
+            First Name:
+            <input name="FirstName" type="text" />
+        </div>
+        <div>
+            Last Name:
+            <input name="LastName" type="text" />
+        </div>
+        <div>
+            Building Name:
+            <input name="WorkLocation.BuildingName" type="text"/>
+        </div>
+        <div>
+            Building Description:
+            <input name="WorkLocation.Description" type="text"/>
+        </div>
+        <div>
+            <input type="submit" value="Go!" />
+        </div>
+    }
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h3>Model Binding Samples</h3>
+
+@Html.Partial("FlashMessage")
+
+<div>
+    @Html.ActionLink("No binding", "NoBinding", "Home")
+</div>
+<div>
+    @Html.ActionLink("Query string binding", "QueryStringBinding", "Home")
+</div>
+<div>
+    @Html.ActionLink("Class binding", "ClassBinding", "Home")
+</div>
+<div>
+    @Html.ActionLink("List binding", "ListBinding", "Home")
+</div>

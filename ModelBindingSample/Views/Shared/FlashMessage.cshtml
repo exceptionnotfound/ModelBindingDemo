@@ -1,0 +1,27 @@
+﻿@{
+    string text = (string)TempData["FlashMessage.Text"];
+    string title = (string)TempData["FlashMessage.Title"];
+    FlashMessageType type = FlashMessageType.None;
+    string cssClass = null;
+    if (!string.IsNullOrWhiteSpace(text))
+    {
+        type = (FlashMessageType)TempData["FlashMessage.Type"];
+        if (type != FlashMessageType.None)
+        {
+            cssClass = type.ToString().ToLower();
+        }
+    }
+}
+@if (!string.IsNullOrWhiteSpace(text))
+{
+    <div class="message-@cssClass">
+        @if (!String.IsNullOrWhiteSpace(title))
+        {
+            <h3>@title</h3>
+        }
+        <p>
+            @text
+        </p>
+    </div>
+}
+

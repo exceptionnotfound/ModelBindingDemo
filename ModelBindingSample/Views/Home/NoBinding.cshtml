@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "No binding";
+}
+
+<h2>No Binding</h2>
+
+<div>
+    @using (Html.BeginForm("NoBindingPost", "Home"))
+    {
+        <div>
+            ID:
+            <input name="ID" type="text" />
+        </div>
+        <div>
+            First Name:
+            <input name="FirstName" type="text" />
+        </div>
+        <div>
+            Last Name:
+            <input name="LastName" type="text" />
+        </div>
+        <div>
+            <input type="submit" value="Go!" />
+        </div>
+    }
+</div>

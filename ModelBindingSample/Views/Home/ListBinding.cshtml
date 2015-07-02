@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "List Binding";
+}
+
+<h3>List Binding</h3>
+
+<div>
+    @using (Html.BeginForm("ListBinding", "Home"))
+    {
+        <div>
+            Employee 1 ID:
+            <input name="[0].ID" type="text" />
+        </div>
+        <div>
+            Employee 1 First Name:
+            <input name="[0].FirstName" type="text" />
+        </div>
+        <div>
+            Employee 1 Last Name:
+            <input name="[0].LastName" type="text" />
+        </div>
+        <div>
+            Employee 1 Building Name:
+            <input name="[0].WorkLocation.BuildingName" type="text" />
+        </div>
+        <div>
+            Employee 1 Building Description:
+            <input name="[0].WorkLocation.Description" type="text" />
+        </div>
+        <br/><br/>
+        <div>
+            Employee 2 ID:
+            <input name="[1].ID" type="text" />
+        </div>
+        <div>
+            Employee 2 First Name:
+            <input name="[1].FirstName" type="text" />
+        </div>
+        <div>
+            Employee 2 Last Name:
+            <input name="[1].LastName" type="text" />
+        </div>
+        <div>
+            Employee 2 Building Name:
+            <input name="[1].WorkLocation.BuildingName" type="text" />
+        </div>
+        <div>
+            Employee 2 Building Description:
+            <input name="[1].WorkLocation.Description" type="text" />
+        </div>
+    <br /><br />
+    <div>
+        Employee 3 ID:
+        <input name="[2].ID" type="text" />
+    </div>
+    <div>
+        Employee 3 First Name:
+        <input name="[2].FirstName" type="text" />
+    </div>
+    <div>
+        Employee 3 Last Name:
+        <input name="[2].LastName" type="text" />
+    </div>
+    <div>
+        Employee 3 Building Name:
+        <input name="[2].WorkLocation.BuildingName" type="text" />
+    </div>
+    <div>
+        Employee 3 Building Description:
+        <input name="[2].WorkLocation.Description" type="text" />
+    </div>
+        <input type="submit" value="Go"/>
+    }
+</div>
